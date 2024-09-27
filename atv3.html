@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 3</title>
 </head>
 <body>
     <script>
 
+        let n1 = 65;
+        let n2 = 29;
 
+        function unirAlgarismos(a, b) {
+            let algarismo1 = n1 - (n1 % 10);
+            let algarismo2 = n2 % 10;
+
+            return algarismo1 + algarismo2
+        }
         
+        alert(unirAlgarismos())
+
     </script>
 </body>
 </html>

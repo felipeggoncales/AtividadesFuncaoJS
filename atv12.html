@@ -8,7 +8,26 @@
 <body>
     <script>
 
+        let meses = ['janeiro', 'fevereiro', 'março', 
+                    'abril', 'maio', 'junho', 'julho', 
+                    'agosto', 'setembro', 'outubro', 
+                    'novembro', 'dezembro']
 
+        let data = '22/10/2007';
+
+        function dataParaDataPorExtenso(d) {
+            let lista = d.split('/');
+            
+            let dia = lista[0]
+            let mes = lista[1]
+            let ano = lista[2]
+
+            mes = meses[parseInt(mes) - 1];
+
+            alert(`${dia} de ${mes} de ${ano}`)
+        }
+
+        dataParaDataPorExtenso(data)
         
     </script>
 </body>

@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 4</title>
 </head>
 <body>
     <script>
 
+        let n1 = 9;
+        let n2 = 7;
+        let n3 = 8.5;
 
+        function calcularMedia(v1,v2,v3,l) {
+            let numeros = [];
+            if (l.toUpperCase() === 'A') {
+                numeros.push(v1,v2,v3);
+                let media = (numeros.reduce((a,b) => a+b, 0)) / numeros.length;
+                return media
+            } else if (l.toUpperCase() === 'P') {
+                let nota1 = v1*5;
+                let nota2 = v2*3;
+                let nota3 = v3*2;
+                let media = (nota1+nota2+nota3)/10
+                return media
+            }
+        }
         
+        alert(`Média aritmética de ${n1}, ${n2} e ${n3}: ${calcularMedia(n1,n2,n3, 'A').toFixed(2)}\n\nMédia ponderada de ${n1}, ${n2} e ${n3}: ${calcularMedia(n1,n2,n3, 'P').toFixed(2)}`)
+
     </script>
 </body>
 </html>

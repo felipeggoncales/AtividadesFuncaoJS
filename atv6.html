@@ -8,7 +8,17 @@
 <body>
     <script>
 
+        let diasRestantes = 30;
 
+        function verificarDiasRestantes(d) {
+            if (diasRestantes < 30) {
+                alert(`${d} dias restantes - Oba, quase férias!`)
+            } else {
+                alert(`${d} dias restantes - Ainda falta muito para o Natal...`)
+            }
+        }
+
+        verificarDiasRestantes(diasRestantes)
         
     </script>
 </body>

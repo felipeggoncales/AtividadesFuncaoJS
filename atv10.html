@@ -8,8 +8,23 @@
 <body>
     <script>
 
+        let num = 7832;
 
-        
+        function inverterNumero(n) {
+            let numString = String(n);
+            let lista = [];
+
+            for (caracter of numString) {
+                lista.push(caracter)
+            }
+
+            lista.reverse();
+
+            alert(`${n} invertido: ${lista.join('')}`);
+        }
+
+        inverterNumero(num)
+
     </script>
 </body>
 </html>
