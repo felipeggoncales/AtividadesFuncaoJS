@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 14</title>
 </head>
 <body>
     <script>
 
+        let num1 = 1;
+        let num2 = -5;
+        let num3 = 6;
 
+        function bhaskara(a,b,c) {
+            let delta = (b**2) - (4*a*c); 
+            // delta positivo
+            let x1 = (-b + Math.sqrt(delta)) / (2*a)
+            // delta negativo
+            let x2 = (-b - Math.sqrt(delta)) / (2*a)
+
+            alert(`x1 = ${x1}\nx2 = ${x2}`)
+        }
+
+        bhaskara(num1,num2,num3)
         
     </script>
 </body>

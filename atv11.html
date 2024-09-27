@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 11</title>
 </head>
 <body>
     <script>
 
+        function jogarDados() {
+            return (Math.floor(Math.random() * 6) + 1) + (Math.floor(Math.random() * 6) + 1);
+        }
 
-        
+        function jogarCraps() {
+            let resultado = jogarDados()
+            alert(`Os dados indicam o número... ${resultado}!`)
+
+            if (resultado === 7 || resultado === 11) {
+                alert('Você é um natural! Ganhou!')
+            } else if (resultado === 2 || resultado === 3 || resultado === 12) {
+                alert('Craps! Você perdeu!')
+            } else {
+                alert('Ponto! Guarde seu número!')
+                while (true) {
+                    let dado = jogarDados()
+                    alert(`Os dados indicam o número... ${dado}!`)
+                    if (dado === resultado) {
+                        alert(`Você tirou o número ${resultado} novamente, você ganhou!`)
+                        break
+                    } else if (dado === 7) {
+                        alert(`Você tirou ${dado}, você perdeu!`)
+                        break
+                    }
+            }
+            }
+        }
+
+        jogarCraps()
+
     </script>
 </body>
 </html>

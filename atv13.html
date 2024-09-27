@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 13</title>
 </head>
 <body>
     <script>
 
+        let palavra = 'pernilongo';
 
+        function embaralhar(word) {
+            let lista = word.split('');
+
+            for (i = lista.length; i; i--) {
+                const indiceAleatorio = Math.floor(Math.random() * i);
+                const elemento = lista[i - 1];
+                lista[i - 1] = lista[indiceAleatorio];
+                lista[indiceAleatorio] = elemento;
+            }
+
+            alert(`${word} = ${lista.join('')}`)
+        }
+
+        embaralhar(palavra)
         
     </script>
 </body>

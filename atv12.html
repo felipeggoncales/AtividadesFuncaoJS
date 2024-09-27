@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Atividade 12</title>
 </head>
 <body>
     <script>
@@ -22,13 +22,18 @@
             let mes = lista[1]
             let ano = lista[2]
 
-            mes = meses[parseInt(mes) - 1];
-
-            alert(`${dia} de ${mes} de ${ano}`)
+            let resultado;
+            if (dia > 31 || dia < 1 || mes > 12 || mes < 1) {
+                resultado = null;
+            } else {
+                mes = meses[parseInt(mes) - 1];
+                resultado = `${dia} de ${mes} de ${ano}`;
+            }
+            alert(`${d} = ${resultado}`)
         }
 
         dataParaDataPorExtenso(data)
-        
+
     </script>
 </body>
 </html>
